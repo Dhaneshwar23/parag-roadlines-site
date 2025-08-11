@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 /* Custom scroll reveal animation tweaks */
-html {
-  scroll-behavior: smooth;
-}
+:root { --header-h: 56px; }       /* matches h-14 */
+section[id] { scroll-margin-top: var(--header-h); }
+html { scroll-behavior: smooth; }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TruckIcon from './components/TruckIcon';
 import Logo from './CompanyLogo';
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -15,20 +16,15 @@ function App() {
   return (
     <div className="font-poppins text-gray-800">
       {/* Header */}
-      <header className="bg-gray-900 p-4">
+      
         {/*<img src={logos} alt="" width={50} height={50} fill-opacity/>*/}
-        <div className="w-[100px] h-[100px]">
-         <Logo className="w-[100px] h-[100px]" />
-        </div>
-        <div>
-          <li>Home</li>
-          <li>About</li>
-        </div>
-
-      </header>
+    
+      <Navbar />
+    
+      
 
       {/* Hero Section */}
-      <section
+      <section id='home'
         className="relative bg-cover bg-center h-[500px]"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&w=1350&q=80')" }}
 
@@ -44,7 +40,7 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section className="p-10 bg-gray-100" data-aos="fade-up">
+      <section id='about' className="p-10 bg-gray-100" data-aos="fade-up">
         <h3 className="text-2xl font-semibold mb-6 text-center">Our Services</h3>
         <div className="grid md:grid-cols-3 gap-6 mt-4">
           {['Full Truck Load', 'Inter-State Logistics', 'Fast Delivery'].map((title, index) => (
@@ -77,7 +73,7 @@ function App() {
       </section>
 
       {/* Quote Form */}
-      <section className="p-10 bg-gray-100" data-aos="fade-up">
+      <section id='contact' className="p-10 bg-gray-100" data-aos="fade-up">
         <h3 className="text-2xl font-semibold mb-6 text-center">Request a Quote</h3>
         <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
           <input type="text" required placeholder="Pickup Location" className="border p-2 rounded" />
